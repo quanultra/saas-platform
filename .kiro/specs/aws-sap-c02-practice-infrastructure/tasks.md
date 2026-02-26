@@ -31,7 +31,7 @@ Dự án này triển khai một hệ thống infrastructure hoàn chỉnh trên
     - Setup NAT Gateways và Internet Gateway
     - _Yêu cầu: 3.1, 3.2, 8.1_
 
-  - [ ] 2.2 Implement S3 Cross-Region Replication
+  - [x] 2.2 Implement S3 Cross-Region Replication
     - Tạo S3Stack với versioning và encryption
     - Configure replication rules giữa regions
     - Setup lifecycle policies
