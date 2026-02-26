@@ -43,7 +43,7 @@ Dự án này triển khai một hệ thống infrastructure hoàn chỉnh trên
     - Setup automated backups và encryption
     - _Yêu cầu: 3.4, 8.2_
 
-  - [ ] 2.4 Implement Route 53 với health checks và failover
+  - [x] 2.4 Implement Route 53 với health checks và failover
     - Tạo Route53Stack với hosted zones
     - Configure health checks cho endpoints
     - Setup failover routing policies
