@@ -49,13 +49,13 @@ Dự án này triển khai một hệ thống infrastructure hoàn chỉnh trên
     - Setup failover routing policies
     - _Yêu cầu: 3.5, 8.3_
 
-  - [ ] 2.5 Implement CloudFront distribution
+  - [x] 2.5 Implement CloudFront distribution
     - Tạo CloudFrontStack với S3 origin
     - Configure caching behaviors
     - Setup SSL/TLS certificates
     - _Yêu cầu: 3.6_
 
-  - [ ]* 2.6 Viết property tests cho multi-region architecture
+  - [ ] 2.6 Viết property tests cho multi-region architecture
     - **Property 1: VPC CIDR không overlap giữa các regions**
     - **Property 2: S3 replication consistency**
     - **Property 3: RDS failover time < 1 phút**
