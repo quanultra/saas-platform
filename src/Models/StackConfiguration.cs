@@ -30,6 +30,7 @@ namespace AwsSapC02Practice.Infrastructure.Models
         public string InstanceClass { get; set; } = "db.r5.large";
         public bool EnableEncryption { get; set; } = true;
         public int BackupRetentionDays { get; set; } = 7;
+        public string DatabaseName { get; set; } = "sapc02db";
     }
 
     public class SecurityConfiguration

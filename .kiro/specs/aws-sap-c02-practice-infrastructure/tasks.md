@@ -37,7 +37,7 @@ Dự án này triển khai một hệ thống infrastructure hoàn chỉnh trên
     - Setup lifecycle policies
     - _Yêu cầu: 3.3, 9.3_
 
-  - [ ] 2.3 Implement RDS Multi-Region với Aurora Global Database
+  - [x] 2.3 Implement RDS Multi-Region với Aurora Global Database
     - Tạo RdsStack với Aurora PostgreSQL
     - Configure global database với secondary region
     - Setup automated backups và encryption
