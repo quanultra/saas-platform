@@ -107,32 +107,32 @@ Dự án này triển khai một hệ thống infrastructure hoàn chỉnh trên
     - **Property 6: RPO < 15 phút**
     - **Validates: Yêu cầu 7.1, 7.2, 7.3**
 
-- [ ] 6. Triển khai Security và Compliance
-  - [ ] 6.1 Implement AWS WAF
+- [x] 6. Triển khai Security và Compliance
+  - [x] 6.1 Implement AWS WAF
     - Tạo WafStack với web ACLs
     - Configure managed rule groups
     - Setup rate limiting và geo-blocking
     - _Yêu cầu: 4.1, 4.2_
 
-  - [ ] 6.2 Implement KMS encryption
+  - [x] 6.2 Implement KMS encryption
     - Tạo KmsStack với customer managed keys
     - Configure key policies và grants
     - Setup automatic key rotation
     - _Yêu cầu: 4.3, 4.4_
 
-  - [ ] 6.3 Implement CloudTrail và logging
+  - [x] 6.3 Implement CloudTrail và logging
     - Tạo CloudTrailStack với multi-region trails
     - Configure S3 bucket cho logs
     - Setup log file validation
     - _Yêu cầu: 4.5, 12.1_
 
-  - [ ] 6.4 Implement GuardDuty và Security Hub
+  - [x] 6.4 Implement GuardDuty và Security Hub
     - Tạo SecurityMonitoringStack
     - Enable GuardDuty trong tất cả regions
     - Configure Security Hub với standards
     - _Yêu cầu: 4.6, 12.2_
 
-  - [ ] 6.5 Viết property tests cho security
+  - [x] 6.5 Viết property tests cho security
     - **Property 7: Tất cả S3 buckets phải encrypted**
     - **Property 8: Tất cả EBS volumes phải encrypted**
     - **Property 9: CloudTrail phải enabled ở tất cả regions**
