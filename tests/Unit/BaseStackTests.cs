@@ -21,7 +21,7 @@ namespace AwsSapC02Practice.Tests.Unit
                 return GenerateResourceName(resourceType);
             }
 
-            public void TestCreateOutput(string id, string value, string description = null)
+            public void TestCreateOutput(string id, string value, string? description = null)
             {
                 CreateOutput(id, value, description);
             }

@@ -24,7 +24,7 @@ Dự án này triển khai một hệ thống infrastructure hoàn chỉnh trên
     - Test tagging và naming conventions
     - _Yêu cầu: 11.1_
 
-- [ ] 2. Triển khai Multi-Region Architecture
+- [x] 2. Triển khai Multi-Region Architecture
   - [x] 2.1 Implement VPC Stack với multi-region support
     - Tạo VpcStack class với 3 AZs
     - Configure public/private/isolated subnets
@@ -55,13 +55,13 @@ Dự án này triển khai một hệ thống infrastructure hoàn chỉnh trên
     - Setup SSL/TLS certificates
     - _Yêu cầu: 3.6_
 
-  - [ ] 2.6 Viết property tests cho multi-region architecture
+  - [x] 2.6 Viết property tests cho multi-region architecture
     - **Property 1: VPC CIDR không overlap giữa các regions**
     - **Property 2: S3 replication consistency**
     - **Property 3: RDS failover time < 1 phút**
     - **Validates: Yêu cầu 3.1, 3.3, 3.4**
 
-- [ ] 3. Checkpoint - Kiểm tra multi-region deployment
+- [x] 3. Checkpoint - Kiểm tra multi-region deployment
   - Đảm bảo tất cả tests pass, hỏi user nếu có vấn đề phát sinh.
 
 - [ ] 4. Triển khai Hybrid Cloud Connectivity
@@ -77,7 +77,7 @@ Dự án này triển khai một hệ thống infrastructure hoàn chỉnh trên
     - Setup route tables và propagation
     - _Yêu cầu: 6.3, 6.4_
 
-  - [ ]* 4.3 Viết tests cho hybrid connectivity
+  - [ ] 4.3 Viết tests cho hybrid connectivity
     - Test VPN connection establishment
     - Test Transit Gateway routing
     - _Yêu cầu: 11.2_
