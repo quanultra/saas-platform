@@ -55,7 +55,7 @@ Dự án này triển khai một hệ thống infrastructure hoàn chỉnh trên
     - Setup SSL/TLS certificates
     - _Yêu cầu: 3.6_
 
-  - [ ] 2.6 Viết property tests cho multi-region architecture
+  - [x] 2.6 Viết property tests cho multi-region architecture
     - **Property 1: VPC CIDR không overlap giữa các regions**
     - **Property 2: S3 replication consistency**
     - **Property 3: RDS failover time < 1 phút**
