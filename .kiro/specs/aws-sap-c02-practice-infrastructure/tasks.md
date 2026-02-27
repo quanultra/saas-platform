@@ -64,20 +64,20 @@ Dự án này triển khai một hệ thống infrastructure hoàn chỉnh trên
 - [x] 3. Checkpoint - Kiểm tra multi-region deployment
   - Đảm bảo tất cả tests pass, hỏi user nếu có vấn đề phát sinh.
 
-- [ ] 4. Triển khai Hybrid Cloud Connectivity
-  - [ ] 4.1 Implement Site-to-Site VPN
+- [x] 4. Triển khai Hybrid Cloud Connectivity
+  - [x] 4.1 Implement Site-to-Site VPN
     - Tạo VpnStack với Customer Gateway
     - Configure Virtual Private Gateway
     - Setup VPN connections với BGP
     - _Yêu cầu: 6.1, 6.2_
 
-  - [ ] 4.2 Implement AWS Transit Gateway
+  - [x] 4.2 Implement AWS Transit Gateway
     - Tạo TransitGatewayStack
     - Configure attachments cho VPCs
     - Setup route tables và propagation
     - _Yêu cầu: 6.3, 6.4_
 
-  - [ ] 4.3 Viết tests cho hybrid connectivity
+  - [x] 4.3 Viết tests cho hybrid connectivity
     - Test VPN connection establishment
     - Test Transit Gateway routing
     - _Yêu cầu: 11.2_
