@@ -174,26 +174,26 @@ Dự án này triển khai một hệ thống infrastructure hoàn chỉnh trên
     - **Property 12: Aurora failover time < 30 giây**
     - **Validates: Yêu cầu 8.1, 8.2, 8.3**
 
-- [ ] 9. Triển khai Microservices Architecture
-  - [ ] 9.1 Implement ECS Fargate cluster
+- [x] 9. Triển khai Microservices Architecture
+  - [x] 9.1 Implement ECS Fargate cluster
     - Tạo EcsStack với Fargate capacity provider
     - Configure task definitions và services
     - Setup service discovery
     - _Yêu cầu: 8.10_
 
-  - [ ] 9.2 Implement EKS cluster
+  - [x] 9.2 Implement EKS cluster
     - Tạo EksStack với managed node groups
     - Configure IRSA (IAM Roles for Service Accounts)
     - Setup cluster autoscaler
     - _Yêu cầu: 8.11_
 
-  - [ ] 9.3 Implement AWS App Mesh
+  - [x] 9.3 Implement AWS App Mesh
     - Tạo AppMeshStack với virtual nodes và services
     - Configure traffic routing và retries
     - Setup observability với X-Ray
     - _Yêu cầu: 8.12_
 
-  - [ ] 9.4 Viết tests cho microservices
+  - [x] 9.4 Viết tests cho microservices
     - Test ECS service deployment
     - Test EKS pod scheduling
     - Test App Mesh routing
