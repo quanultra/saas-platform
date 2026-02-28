@@ -23,7 +23,7 @@ Dự án này cung cấp môi trường hands-on để thực hành 12 chủ đ�
 
 ### Prerequisites
 
-- .NET SDK 6.0+
+- .NET SDK 8.0+
 - AWS CDK CLI
 - AWS Account với appropriate permissions
 - Git
@@ -44,12 +44,7 @@ dotnet restore
 
 # Build project
 dotnet build
-
-# Run tests
-dotnet test
 ```
-
-
 
 ### Bootstrap CDK
 
@@ -80,16 +75,81 @@ cdk destroy --all
 aws-sap-c02-practice/
 ├── src/
 │   ├── Constructs/          # Reusable CDK constructs
+│   │   ├── DisasterRecovery/
+│   │   ├── Storage/
+│   │   ├── Network/
+│   │   └── Database/
 │   ├── Stacks/              # Stack definitions
 │   ├── Models/              # Data models
 │   └── Utils/               # Utility classes
 ├── tests/
 │   ├── Unit/                # Unit tests
-│   ├── PropertyBased/       # Property-based tests
+│   ├── PropertyTests/       # Property-based tests (FsCheck)
 │   └── Integration/         # Integration tests
 ├── scripts/                 # Deployment and utility scripts
 ├── docs/                    # Documentation
 └── .kiro/specs/            # Spec files
+```
+
+## 🧪 Testing
+
+### Chạy Tất Cả Tests
+
+```bash
+# Run all tests (unit + property-based)
+dotnet test
+
+# Run with detailed output
+dotnet test --verbosity normal
+
+# Run with detailed logging
+dotnet test --logger "console;verbosity=detailed"
+```
+
+### Chạy Unit Tests
+
+```bash
+# Run all unit tests
+dotnet test --filter "FullyQualifiedName~Unit"
+
+# Run specific test class
+dotnet test --filter "FullyQualifiedName~VpcStackTests"
+
+# Run specific test method
+dotnet test --filter "VpcStack_ShouldCreatePrimaryVpc"
+```
+
+### Chạy Property-Based Tests
+
+```bash
+# Run all property tests
+dotnet test --filter "FullyQualifiedName~PropertyTests"
+
+# Run disaster recovery property tests
+dotnet test --filter "FullyQualifiedName~DisasterRecoveryPropertyTests"
+
+# Run specific property test
+dotnet test --filter "BackupRetentionCompliance"
+dotnet test --filter "PilotLightRTO"
+dotnet test --filter "DisasterRecoveryRPO"
+```
+
+### Code Coverage
+
+```bash
+# Generate code coverage report
+dotnet test --collect:"XPlat Code Coverage"
+
+# View coverage report (requires reportgenerator)
+dotnet tool install -g dotnet-reportgenerator-globaltool
+reportgenerator -reports:"**/coverage.cobertura.xml" -targetdir:"coveragereport" -reporttypes:Html
+```
+
+### List All Tests
+
+```bash
+# List all available tests
+dotnet test --list-tests
 ```
 
 ## 💰 Cost Estimates
@@ -108,23 +168,25 @@ aws-sap-c02-practice/
 
 **Total**: $1,550 - $3,100/month
 
+## 📊 Test Coverage
 
+Dự án sử dụng property-based testing với FsCheck để đảm bảo tính đúng đắn của infrastructure:
 
-## 🧪 Testing
+### Property Tests cho Disaster Recovery
 
-```bash
-# Run all tests
-dotnet test
+- **Property 4: Backup retention compliance** - Validates backup plans meet minimum retention requirements (7+ days)
+- **Property 5: RTO < 1 giờ cho Pilot Light** - Validates Recovery Time Objective under 1 hour
+- **Property 6: RPO < 15 phút** - Validates Recovery Point Objective under 15 minutes through continuous backup
 
-# Run unit tests only
-dotnet test --filter "Category=Unit"
+### Unit Tests
 
-# Run property-based tests
-dotnet test --filter "Category=PropertyBased"
-
-# Check code coverage
-dotnet test --collect:"XPlat Code Coverage"
-```
+- VPC Stack Tests (12 tests)
+- CloudFront Stack Tests (11 tests)
+- RDS Stack Tests (4 tests)
+- S3 Stack Tests (8 tests)
+- Route53 Stack Tests (8 tests)
+- VPN Stack Tests (7 tests)
+- Transit Gateway Stack Tests (7 tests)
 
 ## 📚 Documentation
 
@@ -146,3 +208,4 @@ This project is for educational purposes.
 - [AWS SAP-C02 Exam Guide](https://aws.amazon.com/certification/certified-solutions-architect-professional/)
 - [AWS CDK Documentation](https://docs.aws.amazon.com/cdk/)
 - [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/)
+- [FsCheck Documentation](https://fscheck.github.io/FsCheck/)
