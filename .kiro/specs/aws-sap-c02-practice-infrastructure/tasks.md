@@ -239,38 +239,38 @@ Dự án này triển khai một hệ thống infrastructure hoàn chỉnh trên
 - [ ] 11. Checkpoint - Kiểm tra data pipeline
   - Đảm bảo tất cả tests pass, hỏi user nếu có vấn đề phát sinh.
 
-- [ ] 12. Triển khai Serverless Architecture
-  - [ ] 12.1 Implement API Gateway
+- [x] 12. Triển khai Serverless Architecture
+  - [x] 12.1 Implement API Gateway
     - Tạo ApiGatewayStack với REST và HTTP APIs
     - Configure authorizers và validators
     - Setup throttling và caching
     - _Yêu cầu: 3.13_
 
-  - [ ] 12.2 Implement Lambda functions
+  - [x] 12.2 Implement Lambda functions
     - Tạo ServerlessStack với Lambda functions
     - Configure layers và environment variables
     - Setup provisioned concurrency
     - _Yêu cầu: 3.14_
 
-  - [ ] 12.3 Implement DynamoDB tables
+  - [x] 12.3 Implement DynamoDB tables
     - Tạo DynamoDbStack với tables
     - Configure GSIs và LSIs
     - Setup auto-scaling và backups
     - _Yêu cầu: 3.15_
 
-  - [ ] 12.4 Implement Step Functions
+  - [x] 12.4 Implement Step Functions
     - Tạo StepFunctionsStack với state machines
     - Configure error handling và retries
     - Setup Express và Standard workflows
     - _Yêu cầu: 3.16_
 
-  - [ ] 12.5 Implement EventBridge
+  - [x] 12.5 Implement EventBridge
     - Tạo EventBridgeStack với event buses
     - Configure rules và targets
     - Setup schema registry
     - _Yêu cầu: 3.17_
 
-  - [ ] 12.6 Viết property tests cho serverless
+  - [x] 12.6 Viết property tests cho serverless
     - **Property 16: API Gateway rate limiting effectiveness**
     - **Property 17: Lambda cold start time < 3 giây**
     - **Property 18: DynamoDB eventual consistency**
