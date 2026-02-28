@@ -342,32 +342,32 @@ Dự án này triển khai một hệ thống infrastructure hoàn chỉnh trên
 
 
 
-- [ ] 16. Triển khai Monitoring và Observability
-  - [ ] 16.1 Implement CloudWatch Dashboards
+- [-] 16. Triển khai Monitoring và Observability
+  - [x] 16.1 Implement CloudWatch Dashboards
     - Tạo MonitoringStack với custom dashboards
     - Configure metrics và alarms
     - Setup composite alarms
     - _Yêu cầu: 12.1, 12.3_
 
-  - [ ] 16.2 Implement CloudWatch Logs
+  - [x] 16.2 Implement CloudWatch Logs
     - Configure log groups với retention
     - Setup log insights queries
     - Configure metric filters
     - _Yêu cầu: 12.2, 12.4_
 
-  - [ ] 16.3 Implement X-Ray tracing
+  - [x] 16.3 Implement X-Ray tracing
     - Tạo XRayStack với sampling rules
     - Configure service maps
     - Setup trace analysis
     - _Yêu cầu: 12.5_
 
-  - [ ] 16.4 Implement Container Insights
+  - [x] 16.4 Implement Container Insights
     - Enable Container Insights cho ECS và EKS
     - Configure performance monitoring
     - Setup log aggregation
     - _Yêu cầu: 12.6_
 
-  - [ ]* 16.5 Viết property tests cho monitoring
+  - [x] 16.5 Viết property tests cho monitoring
     - **Property 22: CloudWatch alarms phải trigger đúng thresholds**
     - **Property 23: X-Ray traces phải complete**
     - **Property 24: Log retention compliance**
