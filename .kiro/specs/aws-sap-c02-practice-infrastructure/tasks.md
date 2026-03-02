@@ -397,26 +397,26 @@ Dự án này triển khai một hệ thống infrastructure hoàn chỉnh trên
     - Test deployment rollback
     - _Yêu cầu: 11.5_
 
-- [ ] 18. Triển khai Stack Lifecycle Management
-  - [ ] 18.1 Implement stack deployment scripts
+- [x] 18. Triển khai Stack Lifecycle Management
+  - [x] 18.1 Implement stack deployment scripts
     - Tạo deployment scripts với error handling
     - Configure stack dependencies
     - Setup rollback procedures
     - _Yêu cầu: 9.5, 9.6_
 
-  - [ ] 18.2 Implement stack update procedures
+  - [x] 18.2 Implement stack update procedures
     - Configure change sets
     - Setup update validation
     - Implement blue-green deployment
     - _Yêu cầu: 9.7_
 
-  - [ ] 18.3 Implement stack deletion procedures
+  - [x] 18.3 Implement stack deletion procedures
     - Configure deletion policies
     - Setup resource retention
     - Implement cleanup scripts
     - _Yêu cầu: 9.8_
 
-  - [ ]* 18.4 Viết property tests cho lifecycle
+  - [x] 18.4 Viết property tests cho lifecycle
     - **Property 25: Stack deployment idempotency**
     - **Property 26: Stack update không downtime**
     - **Property 27: Stack deletion cleanup completeness**
