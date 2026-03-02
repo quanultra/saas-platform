@@ -7,7 +7,7 @@ using Amazon.CDK.AWS.Events.Targets;
 using Constructs;
 using System.Collections.Generic;
 
-namespace AwsSapC02Practice.Stacks;
+namespace AwsSapC02Practice.Infrastructure.Stacks;
 
 public class SecurityMonitoringStack : Stack
 {

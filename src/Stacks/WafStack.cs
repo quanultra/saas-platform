@@ -2,7 +2,7 @@ using Amazon.CDK;
 using Amazon.CDK.AWS.WAFv2;
 using Constructs;
 
-namespace AwsSapC02Practice.Stacks;
+namespace AwsSapC02Practice.Infrastructure.Stacks;
 
 public class WafStack : Stack
 {

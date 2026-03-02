@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Amazon.CDK;
 using Amazon.CDK.Assertions;
 using AwsSapC02Practice.Infrastructure.Models;
@@ -28,17 +29,17 @@ namespace AwsSapC02Practice.Tests.PropertyTests
             };
 
             // Act
-            var stack = new MonitoringStack(app, "TestMonitoringStack", config, new StackProps());
+            var stack = new MonitoringStack(app, "TestMonitoringStack", config);
             var template = Template.FromStack(stack);
 
             // Assert - Verify alarms exist with proper thresholds
             template.ResourceCountIs("AWS::CloudWatch::Alarm", 4);
 
             // Verify CPU alarm threshold
-            template.HasResourceProperties("AWS::CloudWatch::Alarm", new
+            template.HasResourceProperties("AWS::CloudWatch::Alarm", new Dictionary<string, object>
             {
-                Threshold = 80,
-                ComparisonOperator = "GreaterThanThreshold"
+                ["Threshold"] = 80,
+                ["ComparisonOperator"] = "GreaterThanThreshold"
             });
         }
 
@@ -57,8 +58,8 @@ namespace AwsSapC02Practice.Tests.PropertyTests
             var stack = new XRayStack(app, "TestXRayStack", new StackProps(), config);
             var template = Template.FromStack(stack);
 
-            // Assert - Verify X-Ray sampling rules exist
-            template.ResourceCountIs("AWS::XRay::SamplingRule", 3);
+            // Assert - Verify X-Ray sampling rules exist (5 rules: default, high-priority, debug, error, slow-request)
+            template.ResourceCountIs("AWS::XRay::SamplingRule", 5);
         }
 
         [Fact]
@@ -77,9 +78,9 @@ namespace AwsSapC02Practice.Tests.PropertyTests
             var template = Template.FromStack(stack);
 
             // Assert - Verify log groups have retention
-            template.HasResourceProperties("AWS::Logs::LogGroup", new
+            template.HasResourceProperties("AWS::Logs::LogGroup", new Dictionary<string, object>
             {
-                RetentionInDays = 365
+                ["RetentionInDays"] = 365
             });
         }
     }

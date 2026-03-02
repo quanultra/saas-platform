@@ -473,20 +473,20 @@ Dự án này triển khai một hệ thống infrastructure hoàn chỉnh trên
     - Test performance requirements
     - **Validates: Tất cả yêu cầu**
 
-- [ ] 21. Integration và Wiring
-  - [ ] 21.1 Wire tất cả components lại với nhau
+- [x] 21. Integration và Wiring
+  - [x] 21.1 Wire tất cả components lại với nhau
     - Connect VPCs với Transit Gateway
     - Link monitoring với tất cả resources
     - Setup cross-stack references
     - _Yêu cầu: Tất cả_
 
-  - [ ] 21.2 Configure environment-specific settings
+  - [x] 21.2 Configure environment-specific settings
     - Setup dev, staging, prod environments
     - Configure environment variables
     - Setup parameter store values
     - _Yêu cầu: 1.2, 9.6_
 
-  - [ ] 21.3 Implement main CDK app
+  - [x] 21.3 Implement main CDK app
     - Create app entry point
     - Configure stack instantiation order
     - Setup context values
@@ -498,7 +498,7 @@ Dự án này triển khai một hệ thống infrastructure hoàn chỉnh trên
     - Test cost tracking accuracy
     - _Yêu cầu: 11.5_
 
-- [ ] 22. Final Checkpoint - Validation toàn bộ hệ thống
+- [x] 22. Final Checkpoint - Validation toàn bộ hệ thống
   - Đảm bảo tất cả tests pass, verify deployment thành công, hỏi user nếu có vấn đề phát sinh.
 
 ## Ghi chú

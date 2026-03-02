@@ -1,6 +1,6 @@
 using Amazon.CDK;
 using Amazon.CDK.Assertions;
-using AwsSapC02Practice.Stacks;
+using AwsSapC02Practice.Infrastructure.Stacks;
 using FluentAssertions;
 using FsCheck;
 using FsCheck.Xunit;

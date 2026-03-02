@@ -156,11 +156,4 @@ Recovery
 │  ┌────────────────────────────────────────────────────────┐    │
 │  │  Layer 5: Threat Detection (Security Monitoring)      │    │
 │  └────────────────────────────────────────────────────────┘    │
-└─────────────────────────────────────────────────────────────────┘
-```
-
-## Next Steps
-
-- Review [Deployment Guide](../deployment/README.md)
-- Explore [Cost Estimation](../cost/README.md)
-- Study [SAP-C02 Mapping](../study-notes/README.md)
+└─────────────────────────────────────────────────────

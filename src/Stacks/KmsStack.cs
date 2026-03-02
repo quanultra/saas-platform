@@ -3,7 +3,7 @@ using Amazon.CDK.AWS.KMS;
 using Amazon.CDK.AWS.IAM;
 using Constructs;
 
-namespace AwsSapC02Practice.Stacks;
+namespace AwsSapC02Practice.Infrastructure.Stacks;
 
 public class KmsStack : Stack
 {
