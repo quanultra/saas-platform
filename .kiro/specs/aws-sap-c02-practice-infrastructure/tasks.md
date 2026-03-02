@@ -239,38 +239,38 @@ Dự án này triển khai một hệ thống infrastructure hoàn chỉnh trên
 - [ ] 11. Checkpoint - Kiểm tra data pipeline
   - Đảm bảo tất cả tests pass, hỏi user nếu có vấn đề phát sinh.
 
-- [ ] 12. Triển khai Serverless Architecture
-  - [ ] 12.1 Implement API Gateway
+- [x] 12. Triển khai Serverless Architecture
+  - [x] 12.1 Implement API Gateway
     - Tạo ApiGatewayStack với REST và HTTP APIs
     - Configure authorizers và validators
     - Setup throttling và caching
     - _Yêu cầu: 3.13_
 
-  - [ ] 12.2 Implement Lambda functions
+  - [x] 12.2 Implement Lambda functions
     - Tạo ServerlessStack với Lambda functions
     - Configure layers và environment variables
     - Setup provisioned concurrency
     - _Yêu cầu: 3.14_
 
-  - [ ] 12.3 Implement DynamoDB tables
+  - [x] 12.3 Implement DynamoDB tables
     - Tạo DynamoDbStack với tables
     - Configure GSIs và LSIs
     - Setup auto-scaling và backups
     - _Yêu cầu: 3.15_
 
-  - [ ] 12.4 Implement Step Functions
+  - [x] 12.4 Implement Step Functions
     - Tạo StepFunctionsStack với state machines
     - Configure error handling và retries
     - Setup Express và Standard workflows
     - _Yêu cầu: 3.16_
 
-  - [ ] 12.5 Implement EventBridge
+  - [x] 12.5 Implement EventBridge
     - Tạo EventBridgeStack với event buses
     - Configure rules và targets
     - Setup schema registry
     - _Yêu cầu: 3.17_
 
-  - [ ] 12.6 Viết property tests cho serverless
+  - [x] 12.6 Viết property tests cho serverless
     - **Property 16: API Gateway rate limiting effectiveness**
     - **Property 17: Lambda cold start time < 3 giây**
     - **Property 18: DynamoDB eventual consistency**
@@ -342,32 +342,32 @@ Dự án này triển khai một hệ thống infrastructure hoàn chỉnh trên
 
 
 
-- [ ] 16. Triển khai Monitoring và Observability
-  - [ ] 16.1 Implement CloudWatch Dashboards
+- [-] 16. Triển khai Monitoring và Observability
+  - [x] 16.1 Implement CloudWatch Dashboards
     - Tạo MonitoringStack với custom dashboards
     - Configure metrics và alarms
     - Setup composite alarms
     - _Yêu cầu: 12.1, 12.3_
 
-  - [ ] 16.2 Implement CloudWatch Logs
+  - [x] 16.2 Implement CloudWatch Logs
     - Configure log groups với retention
     - Setup log insights queries
     - Configure metric filters
     - _Yêu cầu: 12.2, 12.4_
 
-  - [ ] 16.3 Implement X-Ray tracing
+  - [x] 16.3 Implement X-Ray tracing
     - Tạo XRayStack với sampling rules
     - Configure service maps
     - Setup trace analysis
     - _Yêu cầu: 12.5_
 
-  - [ ] 16.4 Implement Container Insights
+  - [x] 16.4 Implement Container Insights
     - Enable Container Insights cho ECS và EKS
     - Configure performance monitoring
     - Setup log aggregation
     - _Yêu cầu: 12.6_
 
-  - [ ]* 16.5 Viết property tests cho monitoring
+  - [x] 16.5 Viết property tests cho monitoring
     - **Property 22: CloudWatch alarms phải trigger đúng thresholds**
     - **Property 23: X-Ray traces phải complete**
     - **Property 24: Log retention compliance**
@@ -397,51 +397,51 @@ Dự án này triển khai một hệ thống infrastructure hoàn chỉnh trên
     - Test deployment rollback
     - _Yêu cầu: 11.5_
 
-- [ ] 18. Triển khai Stack Lifecycle Management
-  - [ ] 18.1 Implement stack deployment scripts
+- [x] 18. Triển khai Stack Lifecycle Management
+  - [x] 18.1 Implement stack deployment scripts
     - Tạo deployment scripts với error handling
     - Configure stack dependencies
     - Setup rollback procedures
     - _Yêu cầu: 9.5, 9.6_
 
-  - [ ] 18.2 Implement stack update procedures
+  - [x] 18.2 Implement stack update procedures
     - Configure change sets
     - Setup update validation
     - Implement blue-green deployment
     - _Yêu cầu: 9.7_
 
-  - [ ] 18.3 Implement stack deletion procedures
+  - [x] 18.3 Implement stack deletion procedures
     - Configure deletion policies
     - Setup resource retention
     - Implement cleanup scripts
     - _Yêu cầu: 9.8_
 
-  - [ ]* 18.4 Viết property tests cho lifecycle
+  - [x] 18.4 Viết property tests cho lifecycle
     - **Property 25: Stack deployment idempotency**
     - **Property 26: Stack update không downtime**
     - **Property 27: Stack deletion cleanup completeness**
     - **Validates: Yêu cầu 9.5, 9.7, 9.8**
 
-- [ ] 19. Triển khai Documentation và Learning Resources
-  - [ ] 19.1 Tạo architecture diagrams
+- [x] 19. Triển khai Documentation và Learning Resources
+  - [x] 19.1 Tạo architecture diagrams
     - Generate diagrams từ CDK code
     - Document component interactions
     - Create deployment flow diagrams
     - _Yêu cầu: 10.1_
 
-  - [ ] 19.2 Tạo deployment guides
+  - [x] 19.2 Tạo deployment guides
     - Write step-by-step deployment instructions
     - Document prerequisites và dependencies
     - Create troubleshooting guides
     - _Yêu cầu: 10.2_
 
-  - [ ] 19.3 Tạo cost estimation documentation
+  - [x] 19.3 Tạo cost estimation documentation
     - Document cost breakdown by component
     - Create cost optimization recommendations
     - Setup cost calculator templates
     - _Yêu cầu: 10.3_
 
-  - [ ] 19.4 Tạo SAP-C02 study notes
+  - [x] 19.4 Tạo SAP-C02 study notes
     - Map components to exam topics
     - Create practice scenarios
     - Document best practices

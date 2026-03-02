@@ -14,6 +14,7 @@ namespace AwsSapC02Practice.Infrastructure.Models
         public DatabaseConfiguration Database { get; set; } = new();
         public SecurityConfiguration Security { get; set; } = new();
         public MultiRegionConfig MultiRegion { get; set; } = new();
+        public MonitoringConfiguration Monitoring { get; set; } = new();
     }
 
     public class NetworkConfiguration
@@ -46,5 +47,13 @@ namespace AwsSapC02Practice.Infrastructure.Models
         public string PrimaryRegion { get; set; } = "us-east-1";
         public string SecondaryRegion { get; set; } = "eu-west-1";
         public bool EnableCrossRegionReplication { get; set; } = true;
+    }
+
+    public class MonitoringConfiguration
+    {
+        public string AlarmEmail { get; set; } = "";
+        public bool EnableXRay { get; set; } = true;
+        public bool EnableContainerInsights { get; set; } = true;
+        public int LogRetentionDays { get; set; } = 30;
     }
 }
