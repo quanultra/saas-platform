@@ -60,12 +60,33 @@ graph TB
     AM --> DDB
     Lambda --> Aurora
     Lambda --> DDB
-    ECS --> R
-_Aurora[Aurora Active]
+    ECS --> EC
+    EKS --> EC
+    Lambda --> EC
+    ECS --> S3
+    EKS --> S3
+    Lambda --> S3
+    Aurora --> S3
+    DDB --> S3
+
+    subgraph "Primary Region"
+        P_VPC[VPC Primary]
+        P_Aurora[Aurora Active]
+        P_S3[S3 Primary]
+    end
+
+    subgraph "Disaster Recovery"
+        DR_VPC[VPC DR]
+        DR_Aurora[Aurora Standby]
+        DR_S3[S3 DR]
+    end
+
+    subgraph "Warm Standby"
+        WS_VPC[VPC Warm]
+        WS_Aurora[Aurora Active]
         WS_S3[S3 Active]
         WS_Compute[Compute Scaled Down]
     end
-
     P_Aurora -->|Replication| DR_Aurora
     P_S3 -->|Cross-Region Replication| DR_S3
     P_Aurora -->|Replication| WS_Aurora
