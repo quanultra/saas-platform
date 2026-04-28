@@ -10,8 +10,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Amazon.CDK.Lib" Version="2.240.0" />
-    <PackageReference Include="Constructs" Version="10.5.1" />
+    <PackageReference Include="Amazon.CDK.Lib" Version="2.251.0" />
+    <PackageReference Include="Constructs" Version="10.6.0" />
     <PackageReference Include="coverlet.collector" Version="6.0.0" />
     <PackageReference Include="FluentAssertions" Version="8.8.0" />
     <PackageReference Include="FsCheck" Version="2.16.6" />
